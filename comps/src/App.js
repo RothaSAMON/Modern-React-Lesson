@@ -1,25 +1,34 @@
-import Accordion from "./components/Accordion";
+import { useState } from "react";
+import Dropdown from "./components/Dropdown";
 
 function App() {
-    const items = [
-        {
-            id: 'y1k',
-            label: 'can i use react',
-            content: 'You can you react. You can you react. You can you react. You can you react. You can you react.'
-        },
-        {
-            id: 'y2k',
-            label: 'can i use js',
-            content: 'You can you js. You can you js. You can you js. You can you js. You can you js. You can you js'
-        },
-        {
-            id: 'y3k',
-            label: 'can i use css',
-            content: 'You can you css.You can you css .You can you css. You can you css. You can you css'
-        }
+    // I set defualt this 'null' cuz mean no item currently selected
+    const [selection, setSelection] = useState(null);
+
+    const handleSelect = (option) => {
+        setSelection(option);
+    };
+
+    const options = [
+        { label: 'Red', value: 'red'},
+        { label: 'Green', value: 'green'},
+        { label: 'Blue', value: 'blue'}
     ];
 
-    return <Accordion items={items} />
+    return (
+        <div className="flex">
+            <Dropdown 
+            options={options} 
+            value={selection} 
+            onChange={handleSelect} />
+            
+            <Dropdown 
+            options={options} 
+            value={selection} 
+            onChange={handleSelect} />
+        </div>
+        
+    );
 };
 
 export default App;
