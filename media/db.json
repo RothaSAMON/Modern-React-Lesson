@@ -5,50 +5,55 @@
       "name": "Myra"
     },
     {
-      "id": "3ba1",
-      "name": "Floyd Runolfsdottir"
-    },
-    {
       "id": "a72b",
       "name": "Francis Conroy"
     },
     {
-      "id": "c4e4",
-      "name": "Dorothy Bayer"
+      "id": "013a",
+      "name": "Ms. Lana Gutmann"
     },
     {
-      "id": "a43b",
-      "name": "Tasha Treutel"
-    },
-    {
-      "id": "c2fc",
-      "name": "Noah Nader"
-    },
-    {
-      "id": "a56a",
-      "name": "Mr. Jesus Rath"
-    },
-    {
-      "id": "66ca",
-      "name": "Ms. Alyssa Kerluke"
-    },
-    {
-      "id": "73e8",
-      "name": "Jo Yost"
-    },
-    {
-      "id": "eada",
-      "name": "Mr. Josh Mueller"
-    },
-    {
-      "id": "bca3",
-      "name": "Edgar Hyatt-Parker"
-    },
-    {
-      "id": "6fe6",
-      "name": "Thomas Homenick"
+      "id": "9341",
+      "name": "Wendy Lubowitz"
     }
   ],
-  "albums": [],
-  "photos": []
+  "albums": [
+    {
+      "id": "2c44",
+      "userId": "1",
+      "title": "Sleek Cotton Tuna"
+    },
+    {
+      "id": "e755",
+      "userId": "1",
+      "title": "Awesome Wooden Towels"
+    },
+    {
+      "id": "2b08",
+      "userId": "1",
+      "title": "Refined Bronze Hat"
+    }
+  ],
+  "photos": [
+    {
+      "id": "5045",
+      "albumId": "2c44",
+      "url": "https://loremflickr.com/150/150/abstract?lock=968752227155968"
+    },
+    {
+      "id": "8408",
+      "albumId": "2c44",
+      "url": "https://loremflickr.com/150/150/abstract?lock=8863437872431104"
+    },
+    {
+      "id": "d9f7",
+      "albumId": "2c44",
+      "url": "https://loremflickr.com/150/150/abstract?lock=3208999419772928"
+    },
+    {
+      "id": "ba6c",
+      "albumId": "2c44",
+      "url": "https://loremflickr.com/150/150/abstract?lock=2526364311748608"
+    }
+  ]
 }

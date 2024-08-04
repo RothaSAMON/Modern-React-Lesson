@@ -1,7 +1,39 @@
+import { useFetchAlbumsQuery, useAddAlbumMutation } from "../store";
+import Skeleton from './Skeleton';
+import ExpandablePanel from './ExpandablePanel';
+import Button from './Button';
+import AlbumsListItem from "./AlbumsListItem";
 
 function  AlbumsList({user}) {
+    //When we call this hook we going immediately try to fetch some data
+    const  { data, error, isFetching } = useFetchAlbumsQuery(user);
+
+    const  [addAlbum, results] = useAddAlbumMutation();
+
+    const handleAddAlbum = () => {
+        addAlbum(user);
+    };
+
+    // SOMETHING ERROR it should output the data in  db.json : Hiking Trip
+    let content;
+    if (isFetching) {
+        content = <Skeleton className="h-10 w-full" times={3}/>
+    } else if (error) {
+        content = <div>Error loading albums.</div>
+    } else {    
+        content = data.map((album) => {
+            return <AlbumsListItem key={album.id} album={album} />;
+        });
+    }
+
     return(
-        <div>Album for {user.name}</div>
+        <div>
+            <div className="m-2 flex flex-row items-center justify-between">
+                <h3 className="text-lg font-bold">Album for {user.name}</h3>
+                <Button onClick={handleAddAlbum} loading={results.isLoading}>+ Add Album</Button>
+            </div>
+            <div>{content}</div>
+        </div>
     );
 }
 
